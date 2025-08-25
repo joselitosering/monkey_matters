@@ -1,0 +1,18 @@
+{
+  "MSFT":{"name":"Microsoft"},
+  "NVDA":{"name":"NVIDIA"},
+  "AAPL":{"name":"Apple"},
+  "GOOGL":{"name":"Alphabet"},
+  "AMD":{"name":"Advanced Micro Devices"},
+  "SMCI":{"name":"Super Micro Computer"},
+  "ARM":{"name":"Arm Holdings"},
+  "PLTR":{"name":"Palantir"},
+  "BRK.B":{"name":"Berkshire Hathaway Class B"},
+  "JNJ":{"name":"Johnson & Johnson"},
+  "PG":{"name":"Procter & Gamble"},
+  "KO":{"name":"Coca-Cola"},
+  "COST":{"name":"Costco Wholesale"},
+  "HD":{"name":"Home Depot"},
+  "LIN":{"name":"Linde"},
+  "ABBV":{"name":"AbbVie"}
+}

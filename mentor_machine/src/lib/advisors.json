@@ -1,0 +1,21 @@
+[
+  { "id":"dalio","name":"Ray Dalio","category":"Macro & Value","bias":{"bull":0.33,"base":0.44,"bear":0.23},"defaultWeight":14,"defaultAccuracy":0.62,"voiceTag":"macro-balanced"},
+  { "id":"buffett","name":"Warren Buffett","category":"Macro & Value","bias":{"bull":0.45,"base":0.45,"bear":0.10},"defaultWeight":15,"defaultAccuracy":0.68,"voiceTag":"patient-compounding"},
+  { "id":"burry","name":"Michael Burry","category":"Macro & Value","bias":{"bull":0.15,"base":0.35,"bear":0.50},"defaultWeight":10,"defaultAccuracy":0.56,"voiceTag":"skeptical-bearish"},
+  { "id":"elerian","name":"Mohamed El-Erian","category":"Macro & Value","bias":{"bull":0.28,"base":0.52,"bear":0.20},"defaultWeight":10,"defaultAccuracy":0.60,"voiceTag":"macro-prudence"},
+  { "id":"lynAlden","name":"Lyn Alden","category":"Macro & Value","bias":{"bull":0.30,"base":0.50,"bear":0.20},"defaultWeight":10,"defaultAccuracy":0.60,"voiceTag":"macro-structural"},
+  { "id":"tomLee","name":"Tom Lee","category":"Analyst","bias":{"bull":0.60,"base":0.30,"bear":0.10},"defaultWeight":10,"defaultAccuracy":0.55,"voiceTag":"optimistic-tech"},
+  { "id":"meredithWhitney","name":"Meredith Whitney","category":"Analyst","bias":{"bull":0.15,"base":0.45,"bear":0.40},"defaultWeight":9,"defaultAccuracy":0.57,"voiceTag":"consumer-risk"},
+  { "id":"mikeWilson","name":"Mike Wilson","category":"Analyst","bias":{"bull":0.35,"base":0.45,"bear":0.20},"defaultWeight":9,"defaultAccuracy":0.56,"voiceTag":"earnings-breadth"},
+  { "id":"danIves","name":"Dan Ives","category":"Analyst","bias":{"bull":0.58,"base":0.32,"bear":0.10},"defaultWeight":9,"defaultAccuracy":0.54,"voiceTag":"tech-hype-positive"},
+  { "id":"stephanieLink","name":"Stephanie Link","category":"Analyst","bias":{"bull":0.45,"base":0.45,"bear":0.10},"defaultWeight":8,"defaultAccuracy":0.58,"voiceTag":"quality-stock-picker"},
+  { "id":"brianShannon","name":"Brian Shannon","category":"Technical","bias":{"bull":0.34,"base":0.48,"bear":0.18},"defaultWeight":10,"defaultAccuracy":0.60,"voiceTag":"vwap-discipline"},
+  { "id":"johnBollinger","name":"John Bollinger","category":"Technical","bias":{"bull":0.33,"base":0.52,"bear":0.15},"defaultWeight":9,"defaultAccuracy":0.59,"voiceTag":"rational-analysis"},
+  { "id":"tomDeMark","name":"Tom DeMark","category":"Technical","bias":{"bull":0.33,"base":0.34,"bear":0.33},"defaultWeight":7,"defaultAccuracy":0.55,"voiceTag":"exhaustion-timer"},
+  { "id":"carterWorth","name":"Carter Worth","category":"Technical","bias":{"bull":0.34,"base":0.46,"bear":0.20},"defaultWeight":8,"defaultAccuracy":0.57,"voiceTag":"chart-pure"},
+  { "id":"peterReznicek","name":"Peter Reznicek","category":"Technical","bias":{"bull":0.32,"base":0.50,"bear":0.18},"defaultWeight":7,"defaultAccuracy":0.56,"voiceTag":"market-profile"},
+  { "id":"kenGriffin","name":"Ken Griffin (Citadel)","category":"Quant / Multi-Strategy","bias":{"bull":0.36,"base":0.48,"bear":0.16},"defaultWeight":11,"defaultAccuracy":0.62,"voiceTag":"multi-strat-balance"},
+  { "id":"izzyEnglander","name":"Izzy Englander (Millennium)","category":"Quant / Multi-Strategy","bias":{"bull":0.36,"base":0.50,"bear":0.14},"defaultWeight":11,"defaultAccuracy":0.62,"voiceTag":"pod-discipline"},
+  { "id":"johnOverdeck","name":"John Overdeck (Two Sigma)","category":"Quant / Multi-Strategy","bias":{"bull":0.35,"base":0.50,"bear":0.15},"defaultWeight":10,"defaultAccuracy":0.61,"voiceTag":"quant-probabilistic"},
+  { "id":"michaelPlatt","name":"Michael Platt (BlueCrest)","category":"Quant / Multi-Strategy","bias":{"bull":0.35,"base":0.48,"bear":0.17},"defaultWeight":9,"defaultAccuracy":0.59,"voiceTag":"macro-quant-hybrid"}
+]
