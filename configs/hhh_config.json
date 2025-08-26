@@ -1,0 +1,14 @@
+{
+  "topLevelAccountName": "Top Level",
+  "summarySymbols": ["overview", "account total"],
+  "accountOrder": ["Top Level", "Income", "Hedge", "Savings", "Retirement", "Trust", "Crypto", "Piggy Bank"],
+  "hiddenColumns": ["Account", "Description", "Cost Basis", "Security Type"],
+  "columnAliases": {
+    "MV": ["MV", "Market Value", "Total"],
+    "DayPL": ["Day P/L", "Day PnL", "Day Gain"],
+    "DayPct": ["Day %", "Day % Change", "Day Change %"],
+    "UnrlPL": ["Unrl P/L", "Unrealized P/L", "Unrealized"],
+    "UnrlPct": ["Unrl %", "Unrealized %"],
+    "Rating": ["Rating", "Score"]
+  }
+}
