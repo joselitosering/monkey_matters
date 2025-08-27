@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>App.js Viewer</title>
+  <style>
+    html,body { height:100%; margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    #root { min-height:100%; display:grid; place-items:center; padding:24px; }
+  </style>
+
+  <!-- Polyfill/backfill for import maps in older browsers -->
+  <script async src="https://ga.jspm.io/npm:es-module-shims@2.0.8/dist/es-module-shims.js"></script>
+
+  <!-- Map bare specifiers used by App.js (e.g., 'react', 'react-dom/client') -->
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18",
+      "react-dom/client": "https://esm.sh/react-dom@18/client"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="root">Loading…</div>
+
+  <script type="module">
+    import React from 'react';
+    import { createRoot } from 'react-dom/client';
+
+    const APP_URL = 'https://raw.githubusercontent.com/joselitosering/monkey_matters/refs/heads/hedgehog_holdings/configs/App.js';
+
+    async function boot() {
+      try {
+        // Fetch the source, wrap it in a JS Blob (ensures correct MIME), then import as a module
+        const res = await fetch(APP_URL);
+        if (!res.ok) throw new Error(`HTTP ${res.status} loading App.js`);
+        const code = await res.text();
+        const blob = new Blob([code], { type: 'text/javascript' });
+        const blobUrl = URL.createObjectURL(blob);
+
+        const mod = await import(blobUrl);
+        URL.revokeObjectURL(blobUrl);
+
+        const App = mod.default || mod.App;
+        if (!App) throw new Error('No default export or named export "App" found.');
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(React.createElement(App));
+      } catch (err) {
+        console.error(err);
+        document.getElementById('root').textContent = 'Failed to load App.js: ' + err.message;
+      }
+    }
+
+    boot();
+  </script>
+</body>
+</html>
