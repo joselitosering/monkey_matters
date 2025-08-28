@@ -698,3 +698,12 @@ function Kpi({ title, value, sub, tone }) {
     </div>
   );
 }
+
+- export default function HHHReactor() {
++ function HHHReactor() {
+   // ...unchanged...
+ }
+ 
++ // make the component visible to index.html
++ window.HHHReactor = HHHReactor;
+
