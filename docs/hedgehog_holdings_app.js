@@ -698,5 +698,13 @@ function Kpi({ title, value, sub, tone }) {
 }
 
 
-// Attach to window so HTML can access it
+function HHHReactor() {
+  return (
+    React.createElement('div', { style: { padding: '2rem', color: '#fff' } },
+      React.createElement('h1', null, 'HHH Dashboard'),
+      React.createElement('p', null, 'Welcome to the beta interface.')
+    )
+  );
+}
+
 window.HHHReactor = HHHReactor;
