@@ -4,10 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HHH Dashboard — Beta</title>
-    <!-- React UMD builds -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <!-- Babel Standalone to transpile JSX in the browser -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
       body{margin:0;background:#0a0b0e;color:#e7eaf0;font:14px/1.55 ui-sans-serif,system-ui,Segoe UI,Inter,Arial}
@@ -17,16 +15,16 @@
   <body>
     <div id="root"></div>
 
-    <!-- Your JSX file in the same /docs folder -->
-    <script type="text/babel" data-presets="env,react" src="./hedgehog_holdings_app.jsx"></script>
+    <!-- Load your JSX (same folder as this HTML). Cache-bust with ?v=1.2 if needed -->
+    <script type="text/babel" data-presets="env,react" src="./hedgehog_holdings_app.jsx?v=1.2"></script>
 
-    <!-- Mount the exposed component -->
-    <script type="text/babel">
+    <!-- Mount the component you attached to window -->
+    <script>
       const root = ReactDOM.createRoot(document.getElementById('root'));
       if (window.HHHReactor) {
         root.render(React.createElement(window.HHHReactor));
       } else {
-        document.getElementById('root').textContent = 'App component not found (window.HHHReactor is undefined).';
+        document.getElementById('root').textContent = 'window.HHHReactor is undefined — check JSX patches.';
       }
     </script>
   </body>
