@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HHH Dashboard — Beta</title>
-    <!-- React + ReactDOM (UMD) -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <!-- Babel Standalone to transpile JSX in the browser (dev-friendly) -->
+    <!-- React UMD builds -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Babel Standalone to transpile JSX in the browser -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
       body{margin:0;background:#0a0b0e;color:#e7eaf0;font:14px/1.55 ui-sans-serif,system-ui,Segoe UI,Inter,Arial}
@@ -17,23 +17,17 @@
   <body>
     <div id="root"></div>
 
-    <!-- Load your JSX file. Make sure the file path matches the next step. -->
-    <script type="text/babel" data-presets="react" src="./hedgehog_holdings_app.jsx"></script>
+    <!-- Your JSX file in the same /docs folder -->
+    <script type="text/babel" data-presets="env,react" src="./hedgehog_holdings_app.jsx?v=1.1"></script>
 
-    <!-- Mount it -->
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-<div id="root"></div>
-
-<!-- your JSX (unchanged) -->
-<script type="text/babel" data-presets="react" src="./hedgehog_holdings_app.jsx"></script>
-
-<script type="text/babel">
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(React.createElement(window.HHHReactor));
-</script>
-
+    <!-- Mount the exposed component -->
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      if (window.HHHReactor) {
+        root.render(React.createElement(window.HHHReactor));
+      } else {
+        document.getElementById('root').textContent = 'App component not found (window.HHHReactor is undefined).';
+      }
+    </script>
   </body>
 </html>
