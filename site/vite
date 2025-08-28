@@ -1,0 +1,5 @@
+# from the root of your repo (monkey_matters)
+mkdir site
+cd site
+npm create vite@latest . -- --template react
+npm install
