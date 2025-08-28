@@ -12,7 +12,7 @@
  }
 
 + // expose to the window for index.html to mount
-+ window.HHHReactor = HHHReactor;
+window.HHHReactor = HHHReactor;
 
 
 
