@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HHH Dashboard — Beta</title>
 
-    <!-- 1) load React/DOM globals -->
+    <!-- React/ReactDOM globals -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
-    <!-- 2) load Babel to transpile JSX in the browser -->
+    <!-- Babel to transpile JSX in the browser -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <style>
@@ -18,18 +18,26 @@
     </style>
   </head>
   <body>
+    <!-- 1) The mount target MUST be present before any render -->
     <div id="root"></div>
 
-    <!-- 3) your JSX file (same folder as this html) -->
-    <script type="text/babel" data-presets="env,react" src="https://joselitosering.github.io/monkey_matters/hedgehog_holdings_app.jsx?v=1.2"></script>
+    <!-- 2) Load your JSX from the same /docs folder -->
+    <script type="text/babel" data-presets="env,react" src="./hedgehog_holdings_app.jsx?v=1.2"></script>
 
-    <!-- 4) mount after the JSX is loaded -->
+    <!-- 3) Mount AFTER the JSX loads; also handle slow loads gracefully -->
     <script>
       (function mount(){
+        // Ensure the DOM target exists (prevents React error #299)
         const el = document.getElementById('root');
+        if (!el) {
+          document.addEventListener('DOMContentLoaded', mount, { once: true });
+          return;
+        }
+        // Ensure your component was attached to window by the JSX file
         if (!window.HHHReactor) {
-          console.warn('HHHReactor not ready yet; retrying…');
-          return setTimeout(mount, 50);  // handles slow network/caching
+          // Babel might still be parsing the JSX. Retry shortly.
+          setTimeout(mount, 50);
+          return;
         }
         const root = ReactDOM.createRoot(el);
         root.render(React.createElement(window.HHHReactor));
