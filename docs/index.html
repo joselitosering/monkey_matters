@@ -21,16 +21,19 @@
     <script type="text/babel" data-presets="react" src="./hedgehog_holdings_app.jsx"></script>
 
     <!-- Mount it -->
-    <script type="text/babel">
-      const root = ReactDOM.createRoot(document.getElementById('root'));
-      // Render whichever global you exposed in step 1:
-      if (window.HHHReactorShell) {
-        root.render(React.createElement(window.HHHReactorShell));
-      } else if (window.HHHReactor) {
-        root.render(React.createElement(window.HHHReactor));
-      } else {
-        document.getElementById('root').innerHTML = '<pre>App component not found on window.*</pre>';
-      }
-    </script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id="root"></div>
+
+<!-- your JSX (unchanged) -->
+<script type="text/babel" data-presets="react" src="./hedgehog_holdings_app.jsx"></script>
+
+<script type="text/babel">
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(React.createElement(window.HHHReactor));
+</script>
+
   </body>
 </html>
