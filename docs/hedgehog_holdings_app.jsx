@@ -4,7 +4,7 @@
 
 
 // HHH Reactor — Hedge Hog Holdings Dashboard
-// Build: v1.1 (beta)
+// Build: v1.2 (beta)
 
 - export default function HHHReactor() {
 + function HHHReactor() {
@@ -16,10 +16,8 @@
 
 
 
-
-
   // ---- Build metadata ----
-  const BUILD = "1.1";
+  const BUILD = "1.2";
   const RELEASE = "beta";
 
   // ---------------- Config ----------------
@@ -698,12 +696,4 @@ function Kpi({ title, value, sub, tone }) {
     </div>
   );
 }
-
-- export default function HHHReactor() {
-+ function HHHReactor() {
-   // ...unchanged...
- }
- 
-+ // make the component visible to index.html
-+ window.HHHReactor = HHHReactor;
 
