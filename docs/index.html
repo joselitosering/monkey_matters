@@ -19,13 +19,10 @@
     <script type="text/babel" data-presets="env,react" src="./hedgehog_holdings_app.jsx?v=1.2"></script>
 
     <!-- Mount the component you attached to window -->
-    <script>
-      const root = ReactDOM.createRoot(document.getElementById('root'));
-      if (window.HHHReactor) {
-        root.render(React.createElement(window.HHHReactor));
-      } else {
-        document.getElementById('root').textContent = 'window.HHHReactor is undefined — check JSX patches.';
-      }
-    </script>
+<script>
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(React.createElement(window.HHHReactor));
+</script>
+
   </body>
 </html>
