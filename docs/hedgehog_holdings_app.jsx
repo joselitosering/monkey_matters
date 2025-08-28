@@ -697,3 +697,14 @@ function Kpi({ title, value, sub, tone }) {
   );
 }
 
+function HHHReactor() {
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h1>HHH Dashboard</h1>
+      <p>Welcome to the beta interface.</p>
+    </div>
+  );
+}
+
+// Attach to window so HTML can access it
+window.HHHReactor = HHHReactor;
