@@ -1,6 +1,7 @@
 - import React, { useRef, useState, useMemo, useEffect } from "react";
-+ /* globals React */
++ /* global React */
 + const { useRef, useState, useMemo, useEffect } = React;
+
 
 // HHH Reactor — Hedge Hog Holdings Dashboard
 // Build: v1.1 (beta)
