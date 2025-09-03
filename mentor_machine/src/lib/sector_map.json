@@ -1,8 +1,0 @@
-{
-  "Growth/Tech": { "etfs": ["XLK","QQQ","VGT"], "leaders": ["MSFT","NVDA","AAPL","GOOGL"], "growth": ["AMD","SMCI","ARM","PLTR"] },
-  "Quality/Value": { "etfs": ["VTV","SCHD","SPY"], "leaders": ["BRK.B","JNJ","PG","KO"], "growth": ["COST","HD","LIN","ABBV"] },
-  "Defensive (Staples/Health)": { "etfs": ["XLV","XLP"], "leaders": ["UNH","LLY","PG","PEP"], "growth": ["ELV","CI","MRK","MDT"] },
-  "Bonds & Gold": { "etfs": ["TLT","IEF","GLD"], "leaders": [], "growth": [] },
-  "Thematic/Innovation": { "etfs": ["ARKK","SMH","SOXX"], "leaders": ["META","AMZN","GOOGL"], "growth": ["TSLA","SNOW","MDB","SHOP"] },
-  "Cash & Hedges": { "etfs": ["BIL","SHY","SH"], "leaders": [], "growth": [] }
-}
